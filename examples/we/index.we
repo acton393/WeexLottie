@@ -1,0 +1,27 @@
+<template>
+  <div class="container">
+    <text style="margin-bottom: 20px;">weex plugin examples</text>
+    <div onclick="createAction" style="margin: 20px;padding:20px;background-color:#1ba1e2;color:#fff;"><text style="color:#fff">hello world</text></div>
+  </div>
+</template>
+
+<style scoped>
+  .container{
+    flex: 1;
+  }
+</style>
+
+<script>
+
+var plugin = require('@weex-module/WXLottie');
+
+module.exports = {
+  data: {
+  },
+  methods: {
+    createAction: function () {
+      plugin.show();
+    }
+  }
+};
+</script>

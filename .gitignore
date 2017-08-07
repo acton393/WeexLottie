@@ -36,6 +36,13 @@ xcuserdata/
 #
 # Pods/
 
+# Node
+logs
+*.log
+npm-debug.log*
+node_modules
+.npm
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.

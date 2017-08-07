@@ -1,0 +1,20 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+#inhibit_all_warnings!
+
+def common
+    pod 'WXDevtool', '0.15.1'
+    pod 'SDWebImage', '3.7.5'
+    pod 'SocketRocket', '0.4.2'
+    pod 'ATSDK-Weex', '0.0.1'
+    pod 'WXLottie', :path=>'../../'
+    pod 'WeexSDK', :git=>'https://github.com/apache/incubator-weex',:branch=>'0.16-dev'
+    pod 'WeexPluginLoader'
+    pod 'lottie-ios', :git=>'https://github.com/airbnb/lottie-ios.git', :tag=>'1.5.1'
+end
+
+target 'WeexDemo' do
+    common
+end
+
+

@@ -1,0 +1,38 @@
+PODS:
+  - lottie-ios (1.5.1)
+  - SocketRocket (0.5.1)
+  - WeexPluginLoader (0.0.1.9.1):
+    - WeexSDK
+  - WeexSDK (0.16.0):
+    - SocketRocket
+
+DEPENDENCIES:
+  - lottie-ios (from `https://github.com/airbnb/lottie-ios.git`, tag `1.5.1`)
+  - WeexPluginLoader
+  - WeexSDK (from `https://github.com/apache/incubator-weex`, branch `0.16-dev`)
+
+EXTERNAL SOURCES:
+  lottie-ios:
+    :git: https://github.com/airbnb/lottie-ios.git
+    :tag: 1.5.1
+  WeexSDK:
+    :branch: 0.16-dev
+    :git: https://github.com/apache/incubator-weex
+
+CHECKOUT OPTIONS:
+  lottie-ios:
+    :git: https://github.com/airbnb/lottie-ios.git
+    :tag: 1.5.1
+  WeexSDK:
+    :commit: cf40471e6bfe5242f98f0058c7a8e6beb4c537e3
+    :git: https://github.com/apache/incubator-weex
+
+SPEC CHECKSUMS:
+  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  WeexPluginLoader: 85c1304f8ba29864e58531614a0acfeceef1b85c
+  WeexSDK: e9c2dad833c39c3016b554fc419b31d96fe044fb
+
+PODFILE CHECKSUM: 4c364d8e478e1cfeeb85d939de008b5f7f6b3fda
+
+COCOAPODS: 1.2.1.rc.1

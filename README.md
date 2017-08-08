@@ -24,5 +24,9 @@ WeexSDK ： >= 0.15.1
       pod 'WXLottie'
       ```
    - register this weex component after init weexSDK env
+
+## WXLottie for Android
+
+contribution welcome
   
   

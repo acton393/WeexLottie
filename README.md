@@ -10,6 +10,7 @@ WeexSDK ： >= 0.15.1
 
 [WeexLottie](https://github.com/acton393/WeexLottie)
 
+![example](examples/gif/lottie.gif)
 usage:
 
 1. run start script in your terminal

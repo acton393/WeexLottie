@@ -117,7 +117,7 @@
     }
     _animationView = newAnimationView;
     [self addSubview: newAnimationView];
-    [_animationView setFrame:self.frame];
+    [_animationView setFrame:self.bounds];
     [self applyAnimationProperties];
 }
 

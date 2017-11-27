@@ -1,3 +1,5 @@
+### this will be updated on [weex-plugins repository](https://github.com/weex-plugins/WeexLottie) later on.
+
 # WXLottie
 WXLottie is a [weex](https://github.com/apache/incubator-weex) component  plugin using [lottie](https://github.com/airbnb/lottie-ios)
 

@@ -189,7 +189,7 @@ WX_EXPORT_METHOD(@selector(reset))
         _loop = [WXConvert BOOL:attributes[@"loop"]];
     }
     if (attributes[@"speed"]) {
-        _speed = [WXConvert CGFloat:attributes[@"spped"]];
+        _speed = [WXConvert CGFloat:attributes[@"speed"]];
     }
 }
 

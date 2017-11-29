@@ -17,7 +17,7 @@
 
 - (void)play;
 - (void)reset;
-- (void)setValue;
+- (void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame;
 
 @end
 

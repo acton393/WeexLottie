@@ -151,6 +151,7 @@
 WX_PlUGIN_EXPORT_COMPONENT(lottie, WXLottieComponent)
 WX_EXPORT_METHOD(@selector(play))
 WX_EXPORT_METHOD(@selector(reset))
+WX_EXPORT_METHOD(@selector(setValue))
 
 - (instancetype)initWithRef:(NSString *)ref type:(NSString *)type styles:(NSDictionary *)styles attributes:(NSDictionary *)attributes events:(NSArray *)events weexInstance:(WXSDKInstance *)weexInstance
 {

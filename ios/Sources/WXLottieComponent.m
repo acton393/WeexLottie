@@ -17,7 +17,7 @@
 
 - (void)play;
 - (void)reset;
-- (void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame;
+- (void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame withColor:(UIColor *)color;
 
 @end
 
@@ -48,10 +48,10 @@
     }
 }
 
--(void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame{
+-(void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame withColor:(UIColor *)color{
     
     if(_animationView != nil){
-        [_animationView setValue:[UIColor blueColor] forKeypath:keyPath atFrame:frame];
+        [_animationView setValue:color forKeypath:keyPath atFrame:frame];
     }
     
 }
@@ -185,11 +185,17 @@ WX_EXPORT_METHOD(@selector(setValue:))
 
     if(self.isViewLoaded){
 
-        if(options[@"keyPath"] && options[@"frame"]){
+        if(options[@"keyPath"] && options[@"frame"] && options[@"color"]){
 
             NSNumber *frame = @([WXConvert NSInteger:options[@"frame"]]);
             NSString *keyPath = [WXConvert NSString:options[@"keyPath"]];
-            [(WXLottieView*)self.view setValue:keyPath atFrame:frame];
+            UIColor *color = [UIColor 
+                colorWithRed: [WXConvert CGFloat:options[@"color"][@"r"]]
+                green: [WXConvert CGFloat:options[@"color"][@"g"]]
+                blue: [WXConvert CGFloat:options[@"color"][@"b"]]
+                alpha: 1.0
+            ];
+            [(WXLottieView*)self.view setValue:keyPath atFrame:frame withColor:color];
 
         }
 

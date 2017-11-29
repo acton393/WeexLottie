@@ -17,6 +17,7 @@
 
 - (void)play;
 - (void)reset;
+- (void)setValue;
 
 @end
 
@@ -45,6 +46,14 @@
         _animationView.animationProgress = 0;
         [_animationView pause];
     }
+}
+
+-(void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame{
+    
+    if(_animationView != nil){
+        [_animationView setValue:[UIColor blueColor] forKeypath:keyPath atFrame:frame];
+    }
+    
 }
 
 - (void)setProgress:(CGFloat)progress
@@ -169,6 +178,22 @@ WX_EXPORT_METHOD(@selector(reset))
     if (self.isViewLoaded) {
         [(WXLottieView*)self.view reset];
     }
+}
+
+- (void)setValue:(NSDictionary *)options{
+
+    if(self.isViewLoaded){
+
+        if(options[@"keyPath"] && options[@"frame"]){
+
+            NSNumber *frame = @([WXConvert NSInteger:options[@"frame"]]);
+            NSString *keyPath = [WXConvert NSString:options[@"keyPath"]];
+            [(WXLottieView*)self.view setValue:keyPath atFrame:frame];
+
+        }
+
+    }
+
 }
 
 - (void)fillLottieAttributes:(NSDictionary*)attributes

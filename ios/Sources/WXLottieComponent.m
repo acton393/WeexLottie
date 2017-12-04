@@ -17,6 +17,7 @@
 
 - (void)play;
 - (void)reset;
+- (void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame withColor:(UIColor *)color;
 
 @end
 
@@ -45,6 +46,14 @@
         _animationView.animationProgress = 0;
         [_animationView pause];
     }
+}
+
+-(void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame withColor:(UIColor *)color{
+    
+    if(_animationView != nil){
+        [_animationView setValue:color forKeypath:keyPath atFrame:frame];
+    }
+    
 }
 
 - (void)setProgress:(CGFloat)progress
@@ -142,6 +151,7 @@
 WX_PlUGIN_EXPORT_COMPONENT(lottie, WXLottieComponent)
 WX_EXPORT_METHOD(@selector(play))
 WX_EXPORT_METHOD(@selector(reset))
+WX_EXPORT_METHOD(@selector(setValue:))
 
 - (instancetype)initWithRef:(NSString *)ref type:(NSString *)type styles:(NSDictionary *)styles attributes:(NSDictionary *)attributes events:(NSArray *)events weexInstance:(WXSDKInstance *)weexInstance
 {
@@ -169,6 +179,28 @@ WX_EXPORT_METHOD(@selector(reset))
     if (self.isViewLoaded) {
         [(WXLottieView*)self.view reset];
     }
+}
+
+- (void)setValue:(NSDictionary *)options{
+
+    if(self.isViewLoaded){
+
+        if(options[@"keyPath"] && options[@"frame"] && options[@"color"]){
+
+            NSNumber *frame = @([WXConvert NSInteger:options[@"frame"]]);
+            NSString *keyPath = [WXConvert NSString:options[@"keyPath"]];
+            UIColor *color = [UIColor 
+                colorWithRed: [WXConvert CGFloat:options[@"color"][@"r"]]
+                green: [WXConvert CGFloat:options[@"color"][@"g"]]
+                blue: [WXConvert CGFloat:options[@"color"][@"b"]]
+                alpha: 1.0
+            ];
+            [(WXLottieView*)self.view setValue:keyPath atFrame:frame withColor:color];
+
+        }
+
+    }
+
 }
 
 - (void)fillLottieAttributes:(NSDictionary*)attributes

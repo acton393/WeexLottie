@@ -71,5 +71,10 @@ usage:
 ## WXLottie for Android
 
 contribution welcome
-  
+
+
+## WXLottie for html5
+
+contribution welcome
+  
   

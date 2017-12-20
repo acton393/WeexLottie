@@ -1,4 +1,5 @@
 # WXLottie
+iOS[![Pod version](https://badge.fury.io/co/WXLottie.svg)](https://cocoapods.org/pods/WXLottie)
 WXLottie is a [weex](https://github.com/apache/incubator-weex) component  plugin using [lottie](https://github.com/airbnb/lottie-ios)
 
 WeexPack version： >= 0.2.0

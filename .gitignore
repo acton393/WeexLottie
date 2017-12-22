@@ -1,3 +1,24 @@
+.DS_Store
+
+#AndroidStudio
+.gradle
+.idea
+build
+captures
+local.properties
+target
+bin
+.classpath
+.project
+.settings
+gen
+*.iml
+lint.xml
+project.properties
+assets/main.js
+gradle
+
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore

@@ -63,7 +63,7 @@ usage:
   ```
 - integrate with cocoaPods
    - add the follow in your Podfile
-  
+
       ```
       pod 'WXLottie'
       ```
@@ -71,11 +71,39 @@ usage:
 
 ## WXLottie for Android
 
-contribution welcome
+-   integrate by weexpack
+
+    ```
+    weexpack plugin add WXLottie
+    ```
+
+-   integrate with maven
+
+    ```groovy
+    compile 'org.asialee.weex:weexplugin:1.0.0'
+    ```
+
+-   integrate with source code:
+
+    -   move `WXLottie.java` in your project
+
+    -   integrate lottie: 
+
+        ```
+        compile "com.airbnb.android:lottie:2.3.1"
+        ```
+
+
+
+Then do not forget to regiter `WXLottie` in your `Application`:
+
+```java
+WXSDKEngine.registerComponent("lottie", WXLottie.class);
+```
 
 
 ## WXLottie for html5
 
 contribution welcome
-  
+
   

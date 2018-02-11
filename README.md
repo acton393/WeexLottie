@@ -1,5 +1,6 @@
 # WXLottie
 [![Pod version](https://badge.fury.io/co/WXLottie.svg)](https://cocoapods.org/pods/WXLottie)
+
 WXLottie is a [weex](https://github.com/apache/incubator-weex) component  plugin using [lottie](https://github.com/airbnb/lottie-ios)
 
 weex-toolkit version： >= 1.2.0
@@ -12,12 +13,9 @@ WeexSDK ： >= 0.15.1
 [WeexLottie](https://github.com/acton393/WeexLottie)
 
 ![example](examples/gif/lottie.gif)
-usage:
 
-1. run start script in your terminal
-2. front-end
-  vue description:
-
+### usage:
+Examples:
 ```
 <template>
   <div style='margin-top:50px;margin-left:150px'>
@@ -40,13 +38,13 @@ usage:
         if (this.play) {
           this.play = false;
           lottie.reset();
-		  lottie1.reset();
-		  this.status = "play";
+	  lottie1.reset();
+	  this.status = "play";
         }else {
           this.play = true;
           lottie.play();
-		  lottie1.play();
-		  this.status='stop'
+	  lottie1.play();
+	  this.status='stop'
         }
       }
     }
@@ -54,47 +52,38 @@ usage:
 </script>
 ```
 
-# integrate to your project
-## WXLottie for iOS 
-- integrate by weex
+### integrate to your project
+#### WXLottie for iOS
 
-  ```
-  weex plugin add weex-plugin-lottie
-  ```
-- integrate with cocoaPods
-   - add the follow in your Podfile
-
+- Integrate by weex
+```
+weex plugin add weex-plugin-lottie
+```
+- Integrate with cocoaPods
+   1. Add the follow in your Podfile
       ```
       pod 'WXLottie'
       ```
-   - register this weex component after init weexSDK env
+   2. Register this weex component after init weexSDK env
 
-## WXLottie for Android
+#### WXLottie for Android
 
--   integrate by weex
+- Integrate by weex
+```
+weex plugin add weex-plugin-lottie
+```
+- Integrate with maven
 
-    ```
-    weex plugin add weex-plugin-lottie
-    ```
+```groovy
+compile 'org.asialee.weex:weexplugin:1.0.0'
+```
 
--   integrate with maven
-
-    ```groovy
-    compile 'org.asialee.weex:weexplugin:1.0.0'
-    ```
-
--   integrate with source code:
-
-    -   move `WXLottie.java` in your project
-
-    -   integrate lottie: 
-
-        ```
-        compile "com.airbnb.android:lottie:2.3.1"
-        ```
-
-
-
+- Integrate with source code:
+1. Move `WXLottie.java` in your project
+2. Integrate lottie: 
+```
+compile "com.airbnb.android:lottie:2.3.1"
+```
 Then do not forget to regiter `WXLottie` in your `Application`:
 
 ```java
@@ -102,19 +91,18 @@ WXSDKEngine.registerComponent("lottie", WXLottie.class);
 ```
 
 
-## WXLottie for Web
+#### WXLottie for Web
+- Integrate by weex
+```
+weex plugin add weex-plugin-lottie
+```
 
--   integrate by weex
-    ```
-    weex plugin add weex-plugin-lottie
-    ```
+- Integrate with npm
+```
+npm i weex-plugin-lottie --save
+```
 
--   integrate with npm
-
-    ```
-    npm i weex-plugin-lottie --save
-    ```
-Then do not forget to regiter `weex-plugin-lottie` in your web entry like blow:
+Then do not forget to regiter `weex-plugin-lottie` in your web entry like blow
 
 ```
 import Vue from 'vue';

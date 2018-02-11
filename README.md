@@ -1,8 +1,8 @@
 # WXLottie
-iOS[![Pod version](https://badge.fury.io/co/WXLottie.svg)](https://cocoapods.org/pods/WXLottie)
+[![Pod version](https://badge.fury.io/co/WXLottie.svg)](https://cocoapods.org/pods/WXLottie)
 WXLottie is a [weex](https://github.com/apache/incubator-weex) component  plugin using [lottie](https://github.com/airbnb/lottie-ios)
 
-WeexPack version： >= 0.2.0
+weex-toolkit version： >= 1.2.0
 WeexSDK ： >= 0.15.1
 
 ### WeexLottie
@@ -56,10 +56,10 @@ usage:
 
 # integrate to your project
 ## WXLottie for iOS 
-- integrate by weexpack
+- integrate by weex
 
   ```
-  weexpack plugin add WXLottie
+  weex plugin add weex-plugin-lottie
   ```
 - integrate with cocoaPods
    - add the follow in your Podfile
@@ -71,10 +71,10 @@ usage:
 
 ## WXLottie for Android
 
--   integrate by weexpack
+-   integrate by weex
 
     ```
-    weexpack plugin add WXLottie
+    weex plugin add weex-plugin-lottie
     ```
 
 -   integrate with maven
@@ -102,8 +102,34 @@ WXSDKEngine.registerComponent("lottie", WXLottie.class);
 ```
 
 
-## WXLottie for html5
+## WXLottie for Web
 
-contribution welcome
+-   integrate by weex
+    ```
+    weex plugin add weex-plugin-lottie
+    ```
 
+-   integrate with npm
+
+    ```
+    npm i weex-plugin-lottie --save
+    ```
+Then do not forget to regiter `weex-plugin-lottie` in your web entry like blow:
+
+```
+import Vue from 'vue';
+
+import weex from 'weex-vue-render';
+
+import weex-plugin-lottie from 'weex-plugin-lottie';
+
+weex.init(Vue);
+
+weex.install(weex-plugin-lottie)
+
+const App = require('./index.vue');
+App.el = '#root';
+new Vue(App);
+```
+   
   

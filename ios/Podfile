@@ -3,7 +3,7 @@ platform :ios, '8.0'
 #inhibit_all_warnings!
 
 def common
-    pod 'WeexSDK', :git=>'https://github.com/apache/incubator-weex',:branch=>'0.16-dev'
+	pod 'WeexSDK'
 	pod 'WeexPluginLoader'
     pod 'lottie-ios', :git=>'https://github.com/airbnb/lottie-ios.git', :tag=>'1.5.1'
 end

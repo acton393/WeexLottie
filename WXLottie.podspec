@@ -1,15 +1,15 @@
 # coding: utf-8
 
 Pod::Spec.new do |s|
-  s.name         = "WeexXLottie"
-  s.version      = "0.0.1"
-  s.summary      = "Weex Plugin"
+  s.name         = "WXLottie"
+  s.version      = "1.0"
+  s.summary      = "Weex plugin for lottie"
 
   s.description  = <<-DESC
-                   Weexplugin Source Description
+                  Weex plugin for lottie
                    DESC
 
-  s.homepage     = "https://github.com"
+  s.homepage     = "https://github.com/acton393/WeexLottie"
   s.license = {
     :type => 'Copyright',
     :text => <<-LICENSE
@@ -17,12 +17,14 @@ Pod::Spec.new do |s|
     LICENSE
   }
   s.authors      = {
-                     "yourname" =>"youreamail"
+                     "acton393" =>"zhangxing610321@gmail.com"
                    }
   s.platform     = :ios
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
 
-  s.source       = { :git => 'please input the url of your code in github', :tag => 'please input you github tag' }
+  s.user_target_xcconfig  = { 'FRAMEWORK_SEARCH_PATHS' => "'$(PODS_ROOT)/WeexPluginLoader'" }
+
+  s.source       = { :path=>'./'}
   s.source_files  = "ios/Sources/*.{h,m,mm}"
   
   s.requires_arc = true

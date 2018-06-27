@@ -8,9 +8,9 @@ def common
     pod 'SocketRocket', '0.4.2'
     pod 'ATSDK-Weex', '0.0.1'
     pod 'WXLottie', :path=>'../../'
-    pod 'WeexSDK', :git=>'https://github.com/apache/incubator-weex',:branch=>'0.16-dev'
+    pod 'WeexSDK'
     pod 'WeexPluginLoader'
-    pod 'lottie-ios', :git=>'https://github.com/airbnb/lottie-ios.git', :tag=>'1.5.1'
+    pod 'lottie-ios'
 end
 
 target 'WeexDemo' do

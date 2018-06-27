@@ -74,6 +74,9 @@
 
 - (void)setSourceName:(NSString *)src
 {
+    if(!src) {
+        return;
+    }
     NSURL * url = [NSURL URLWithString:src];
     if (url.isFileURL) {
         // local url
@@ -206,7 +209,7 @@ WX_EXPORT_METHOD(@selector(setValue:))
 - (void)fillLottieAttributes:(NSDictionary*)attributes
 {
     if (attributes[@"sourceJson"]) {
-        _sourceJson = [attributes[@"sourceJson"] dictionary];
+        _sourceJson = [attributes[@"sourceJson"] isKindOfClass:[NSDictionary class]]? attributes[@"sourceJson"] : nil;
     }
     if (attributes[@"src"]) {
         _src = [WXConvert NSString:attributes[@"src"]];

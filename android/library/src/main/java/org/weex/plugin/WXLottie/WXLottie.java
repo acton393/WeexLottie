@@ -93,6 +93,16 @@ public class WXLottie extends WXComponent {
                 this.jsonSrc = WXUtils.getString(param, "");
                 setJsonSrc(this.jsonSrc);
                 break;
+            case "sourceJson":
+            case "json":
+                if (param instanceof JSONObject) {
+                    this.lottieJson = (JSONObject) param;
+                    if (this.animationView != null) {
+                        this.animationView.setAnimation(this.lottieJson);
+                        this.animationView.playAnimation();
+                    }
+                }
+                break;
         }
         return super.setProperty(key, param);
     }
